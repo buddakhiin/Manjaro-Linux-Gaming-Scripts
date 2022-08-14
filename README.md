@@ -1,8 +1,9 @@
-# Sample GitLab Project
+# Manjaro Linux Gaming Scripts
 
-This sample project shows how a project in GitLab looks for demonstration purposes. It contains issues, merge requests and Markdown files in many branches,
-named and filled with lorem ipsum.
+Hello World !
 
-You can look around to get an idea how to structure your project and, when done, you can safely delete this project.
+Here is a little repository for helping people initialize their new installation of Manjaro Linux for making it ready for gaming.
 
-[Learn more about creating GitLab projects.](https://docs.gitlab.com/ee/gitlab-basics/create-project.html)
+- Playbooks : this is some playbooks for Ansible (use it with ansible-playbook command) that will automaticaly install some group of softwares for gaming, or tweaks for optimize your computer (for example your fans)
+- Scripts : some shell scripts for settings some tweaks (yes, like in the playbooks, if ever you don't like ansible)
+- Documentation : some MarkDown docs with everything you need to know about this repo, or softwares installed with them
