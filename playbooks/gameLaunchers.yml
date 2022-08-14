@@ -1,0 +1,27 @@
+- name: Install Game Launchers
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Update local packages first
+      pacman:
+        upgrade: yes
+    
+    - name: install Steam
+      pacman:
+        name: steam-native
+        state: present
+
+    - name: install Heroic Game Launcher
+      pacman:
+        name: heroic-games-launcher-bin
+        state: present
+    
+    - name: install Lutris
+      pacman:
+        name: lutris
+        state: present
+    
+    - name: install Itch.io
+      pacman:
+        name: itch 
+        state: present
