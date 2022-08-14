@@ -1,0 +1,56 @@
+- name: Install Emulators
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Update local packages first
+      pacman:
+        upgrade: yes
+    
+    - name: install RetroArch
+      pacman: 
+        name: 
+          - retroarch
+          - gamemode
+          - libretro-overlays
+          - libretro-shaders
+          - retroarch-assets-xmb
+          - libretro-core-info
+          - libretro-shaders-slang
+        state: present
+    
+    - name: install Playstation Emulators
+      pacman:
+        name:
+          - libretro-beetle-psx
+          - libretro-duckstation
+          - libretro-pcsx2
+          - libretro-play
+          - libretro-ppsspp
+        state: present
+    
+    - name: install Nintendo Emulators
+      pacman:
+        name:
+          - libretro-bsnes
+          - libretro-citra
+          - libretro-desmume
+          - libretro-dolphin
+          - libretro-gambatte
+          - libretro-mesen
+          - libretro-mgba
+          - libretro-mupen64plus-next
+        state: present
+    
+    - name: install Sega Emulators
+      pacman:
+        name:
+          - libretro-genesis-plus-gx
+          - libretro-flycast
+          - libretro-kronos 
+        state: present
+    
+    - name: install DOSBox
+      pacman:
+        name: dosbox
+        state: present
+    
