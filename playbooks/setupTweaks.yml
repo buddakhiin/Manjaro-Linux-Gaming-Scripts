@@ -1,0 +1,23 @@
+- name: Install Tweaks softwares
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Update local packages first
+      pacman:
+        upgrade: yes
+    
+    - name: install Fancontrol
+      pacman: 
+        name: 
+          - fancontrol-gui
+        state: present
+    
+    - name: install Corectrl
+      pacman: 
+        name: 
+          - corectrl
+          - vulkan-tools
+          - mesa-utils
+          - util-linux
+        state: present
+    

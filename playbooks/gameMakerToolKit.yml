@@ -1,0 +1,18 @@
+- name: Install Softwares for game makers
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Update local packages first
+      pacman:
+        upgrade: yes
+    
+    - name: install Godot, Git and VS Code as an EDI
+      pacman: 
+        name: 
+          - godot
+          - code
+          - bash-completion
+          - zsh-completions
+          - x11-ssh-askpass
+          - git
+        state: present
