@@ -1,0 +1,78 @@
+- name: Install Softwares for Content Creators
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Update local packages first
+      pacman:
+        upgrade: yes
+
+    - name: install OBS Studio and dependancies
+      pacman: 
+        name: 
+          - obs-studio
+          - python
+          - sndio
+          - v4l2loopback-dkms
+          - luajit
+          - libva-mesa-driver
+          - libfdk-aac
+        state: present
+
+    - name: install KDEnlive
+      pacman: 
+        name: 
+          - kdenlive
+          - ffmpeg
+          - dvgrab
+          - recordmydesktop
+          - opencv
+          - opentimelineio
+          - bihsh0t
+          - mediainfo
+          - noise-suppression-for-voice
+        state: present
+    
+    - name: install Audacity
+      pacman: 
+        name: 
+          - audacity
+          - audacity-docs
+        state: present
+    
+    - name: install GIMP
+      pacman: 
+        name: 
+          - gimp
+          - gutenprint
+          - libjxl
+          - curl
+          - poppler-glib
+          - alsa-lib
+          - ghostscript
+          - gvfs
+        state: present
+    
+    - name: install Krita
+      pacman: 
+        name: 
+          - krita
+          - poppler-qt5
+          - ffmpeg
+          - python-pyqt5
+          - libheif
+          - kseexpr
+          - kimageformats
+          - libmypaint
+          - krita-plugin-gmic
+        state: present
+
+    - name: install Inkscape
+      pacman: 
+        name: 
+          - inkscape
+          - fig2dev
+          - gvfs
+          - pstoedit
+          - scour
+          - texlive-core
+        state: present

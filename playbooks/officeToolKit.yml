@@ -1,0 +1,64 @@
+- name: Install Softwares for Office
+  hosts: localhost
+  become: true
+  tasks:
+    - name: Update local packages first
+      pacman:
+        upgrade: yes
+
+    - name: install LibreOffice suite and dependancies
+      pacman: 
+        name: 
+          - libreoffice-fresh-fr
+          - libreoffice-fresh
+          - java-runtime
+          - java-environment
+          - pstoedit
+          - libmythes
+          - beanshell
+          - libwpg
+          - sane
+          - unixodbc
+          - gst-plugins-base-libs
+          - libpaper
+          - gtk3
+          - kio
+        state: present
+
+    - name: install GIMP
+      pacman: 
+        name: 
+          - gimp
+          - gutenprint
+          - libjxl
+          - curl
+          - poppler-glib
+          - alsa-lib
+          - ghostscript
+          - gvfs
+        state: present
+    
+    - name: install Krita
+      pacman: 
+        name: 
+          - krita
+          - poppler-qt5
+          - ffmpeg
+          - python-pyqt5
+          - libheif
+          - kseexpr
+          - kimageformats
+          - libmypaint
+          - krita-plugin-gmic
+        state: present
+
+    - name: install Inkscape
+      pacman: 
+        name: 
+          - inkscape
+          - fig2dev
+          - gvfs
+          - pstoedit
+          - scour
+          - texlive-core
+        state: present
