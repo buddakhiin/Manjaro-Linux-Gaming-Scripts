@@ -1,0 +1,4 @@
+- emulators.yml : installs RetroArch and some emulators for Playstation, Nintendo and Sega consoles + DOSBox
+- gameLaunchers.yml : installs Steam, Heroic Game Mauncher, Itch.io and Lutris
+- gameMakerToolKit.yml : installs Godot, VS Code, Git, and some useful dependancies
+- setupTweaks.yml : installs useful softwares for tweaking your computer performances like Fan Control or Corectrl
