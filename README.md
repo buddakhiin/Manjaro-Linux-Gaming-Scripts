@@ -14,4 +14,4 @@ These playbooks are made for Desktop Computer with Arch Linux based Distribution
 
 # I want to contribute
 
-Please open an issue or contact me on my Social Networks : @Buddakhiin
+Please open an issue or contact me on my Mastodon : @Buddakhiin@eldritch.cafe

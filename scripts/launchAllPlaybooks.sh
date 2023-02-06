@@ -1,3 +1,4 @@
+#!/bin/bash
 sudo pacman -S ansible
 for file in ../playbooks/*
 do
