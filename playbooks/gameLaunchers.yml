@@ -25,3 +25,10 @@
       pacman:
         name: itch 
         state: present
+
+    - name: install Proton-GE and Wine-GE
+      pacman:
+        name:
+            - wine-ge-custom
+            - proton-ge-custom
+        state: present
