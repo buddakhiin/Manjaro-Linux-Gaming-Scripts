@@ -9,13 +9,14 @@
     - name: install OBS Studio and dependancies
       pacman: 
         name: 
-          - obs-studio
+          - obs-studio-stable
           - python
           - sndio
           - v4l2loopback-dkms
           - luajit
           - libva-mesa-driver
           - libfdk-aac
+          - pavucontrol
         state: present
 
     - name: install KDEnlive
