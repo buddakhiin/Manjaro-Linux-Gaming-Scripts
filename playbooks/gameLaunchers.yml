@@ -8,7 +8,7 @@
     
     - name: install Steam
       pacman:
-        name: steam-native
+        name: steam
         state: present
 
     - name: install Heroic Game Launcher

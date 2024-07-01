@@ -10,7 +10,8 @@ Here is a little repository for helping people initialize their new installation
 
 # Warning
 
-These playbooks are made for Desktop Computer with Arch Linux based Distribution and AMD Hardware, they're not tested on Laptops or Intel+Nvidia Hardware combo, use at your own risk !!!
+These playbooks are made for Desktop Computer with Arch Linux based Distribution and AMD Hardware.
+These playbooks has been tested on Lenovo Legion 5 with Nvidia RTX GPU and AMD CPU.
 
 # I want to contribute
 
