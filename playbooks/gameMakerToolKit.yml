@@ -16,3 +16,9 @@
           - x11-ssh-askpass
           - git
         state: present
+
+    - name: install Blender for 3D modelling
+      pacman:
+        name:
+          - blender
+        state: present

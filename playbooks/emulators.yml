@@ -26,6 +26,7 @@
           - libretro-pcsx2
           - libretro-play
           - libretro-ppsspp
+          - rpcs3-git
         state: present
     
     - name: install Nintendo Emulators
@@ -39,6 +40,7 @@
           - libretro-mesen
           - libretro-mgba
           - libretro-mupen64plus-next
+          - ryujinx
         state: present
     
     - name: install Sega Emulators

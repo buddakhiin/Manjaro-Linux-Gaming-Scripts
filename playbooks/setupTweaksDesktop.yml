@@ -21,3 +21,37 @@
           - util-linux
         state: present
     
+    - name: Install CPU Undervolting Tools
+      pacman:
+        name:
+          - intel-undervolt
+          - amdgpu-utils
+        state: present
+
+    - name: Install Power Management Tools
+      pacman:
+        name:
+          - tlp
+          - auto-cpu-freq
+        state: present
+
+    - name: Install Kernel Optimization Tools
+      pacman:
+        name:
+          - linux-zen
+          - linux-zen-headers
+        state: present
+
+    - name: Install Filesystem Optimization Tools
+      pacman:
+        name:
+          - preload
+          - earlyoom
+        state: present
+
+    - name: Install Network Optimization Tools
+      pacman:
+        name:
+          - irqbalance
+          - netdata
+        state: present

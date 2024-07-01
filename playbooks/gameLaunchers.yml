@@ -32,3 +32,16 @@
             - wine-ge-custom
             - proton-ge-custom
         state: present
+
+    - name: install bottles
+      pacman:
+        name:
+            - bottles
+        state: present
+
+    - name: install Lutris
+      pacman:
+        name:
+            - lutris
+        state: present
+

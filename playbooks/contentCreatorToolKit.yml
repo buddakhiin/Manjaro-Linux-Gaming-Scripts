@@ -78,3 +78,15 @@
           - scour
           - texlive-core
         state: present
+
+    - name: Install Shotcut
+      pacman:
+        name:
+          - shotcut
+        state: present
+
+    - name: Install Ardour
+      pacman:
+        name:
+          - ardour
+        state: present

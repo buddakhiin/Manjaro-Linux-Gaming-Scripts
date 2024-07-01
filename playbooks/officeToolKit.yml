@@ -6,7 +6,7 @@
       pacman:
         upgrade: yes
 
-    - name: install LibreOffice suite and dependancies
+    - name: install LibreOffice suite and dependancies (and also OnlyOffice for a more MS Office friendly experience)
       pacman: 
         name: 
           - libreoffice-fresh-fr
@@ -23,6 +23,7 @@
           - libpaper
           - gtk3
           - kio
+          - onlyoffice-bin
         state: present
 
     - name: install GIMP
@@ -61,4 +62,11 @@
           - pstoedit
           - scour
           - texlive-core
+        state: present
+
+    - name: install Scribus and Obsidian
+      pacman:
+        name:
+          - scribus
+          - obsidian
         state: present
