@@ -17,6 +17,7 @@
           - libva-mesa-driver
           - libfdk-aac
           - pavucontrol
+          - easyeffects
         state: present
 
     - name: install KDEnlive
