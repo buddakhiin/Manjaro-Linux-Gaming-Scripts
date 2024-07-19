@@ -17,6 +17,17 @@
           - git
         state: present
 
+    - name: install Unity, Git and VS Code as an EDI
+      pacman: 
+        name: 
+          - unityhub
+          - code
+          - bash-completion
+          - zsh-completions
+          - x11-ssh-askpass
+          - git
+        state: present
+
     - name: install Blender for 3D modelling
       pacman:
         name:
