@@ -16,39 +16,45 @@
           - retroarch-assets-xmb
           - libretro-core-info
           - libretro-shaders-slang
-        state: present
-    
-    - name: install Playstation Emulators
-      pacman:
-        name:
-          - libretro-beetle-psx
-          - libretro-duckstation
-          - libretro-pcsx2
-          - libretro-play
-          - libretro-ppsspp
-          - rpcs3-git
-        state: present
-    
-    - name: install Nintendo Emulators
-      pacman:
-        name:
-          - libretro-bsnes
-          - libretro-citra
-          - libretro-desmume
-          - libretro-dolphin
+          - libretro-beetle-pce
+          - libretro-blastem
+          - libretro-core-info
           - libretro-gambatte
-          - libretro-mesen
-          - libretro-mgba
+          - libretro-melonds
           - libretro-mupen64plus-next
-          - ryujinx
-        state: present
-    
-    - name: install Sega Emulators
-      pacman:
-        name:
+          - libretro-play
+          - libretro-shaders-slang
+          - libretro-beetle-pce-fast
+          - libretro-bsnes
+          - libretro-database-git
           - libretro-genesis-plus-gx
+          - libretro-mesen
+          - libretro-nestopia
+          - libretro-ppsspp
+          - libretro-snes9x
+          - libretro-beetle-psx
+          - libretro-bsnes2014
+          - libretro-desmume
+          - libretro-kronos
+          - libretro-mesen-s
+          - libretro-overlays
+          - libretro-retrodream
+          - libretro-stella2014-git
+          - libretro-beetle-psx-hw
+          - libretro-bsnes-hd
+          - libretro-dolphin
+          - libretro-mame
+          - libretro-scummvm
+          - libretro-meta
+          - libretro-parallel-n64
+          - libretro-sameboy
+          - libretro-yabause
+          - libretro-beetle-supergrafx
+          - libretro-citra
           - libretro-flycast
-          - libretro-kronos 
+          - libretro-mame2016
+          - libretro-mgba
+          - libretro-picodrive
         state: present
     
     - name: install DOSBox
@@ -56,3 +62,9 @@
         name: dosbox
         state: present
     
+
+    - name: download RetroArch mandatory Bioses
+      shell: wget https://github.com/Abdess/retroarch_system/archive/refs/heads/libretro.zip && unzip libretro.zip && rm libretro.zip
+
+    - name: place RetroArch Bioses into correct repertory
+      shell: mv retroarch_system-libretro/*/* /home/*/.config/retroarch/system/ && rm -r retroarch_system-libretro && chmod -R 755 /home/*/.config/retroarch/system/
